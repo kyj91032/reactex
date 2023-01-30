@@ -1,6 +1,76 @@
-.App {
-  text-align: center;
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(18, 43, 39);
 }
+#root {
+  height: 100%;
+  width: 100%;
+}
+.App {
+  height: 100%;
+  width: 100%;
+}
+
+.img {
+  background-image: url('./img/201.jpg');
+  width: 200px;
+  height: 200px;
+}
+
+ul {
+  list-style-type: none;
+  background-color: rgb(18, 43, 39);
+  width: 25%;
+  padding: 10px;
+  margin: 0;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  opacity: 1;
+  transition: 0.4s;
+}
+.active {
+  margin-left: -25%;
+}
+
+.main {
+  padding: 20px;
+  margin: 0;
+  text-align: left;
+  position: relative;
+  float: right;
+  width: 70%;
+  height: 100%;
+  background-color:#282c34;
+  color: white;
+  transition: 0.5s;
+}
+.active2 {
+  width: 95%;
+}
+
+.title {
+  font-weight: bold;
+  padding: 20px;
+  font-size: 24px;
+  
+}
+
+li a {
+  text-decoration: none;
+  display: block;
+  color: rgb(255, 255, 255);
+  padding: 10px 15px 10px 15px;
+}
+
+li a:hover {
+  color: orange;
+}
+
+
+
+
 
 .App-logo {
   height: 40vmin;
