@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import data1 from './../data/data1.js'
 
-function First(props){
+function Second(props){
 
   let [songdata] = useState(data1)
   console.log(songdata)
@@ -12,11 +12,11 @@ function First(props){
     <>
     <div>
       <div className={"main "+ a}>
-        <div className="img1"></div>
+        <div className="img2"></div>
         <div className="imgd">
-          <h3>정규 1집 [201]</h3>
+          <h3>정규 2집 [Don't You Worry Baby]</h3>
           <ul className="des">
-            <li>발매일 | 2010.03.18</li>
+            <li>발매일 | 2011.07.13</li>
             <li>장르 | 인디음악, 록/메탈</li>
             <li>발매사 | YG PLUS</li>
             <li>기획사 | 도기리치, 비스포크</li>
@@ -48,4 +48,4 @@ function First(props){
   )
 }
 
-export default First;
+export default Second;

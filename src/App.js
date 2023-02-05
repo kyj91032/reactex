@@ -2,6 +2,7 @@ import './App.css';
 import { Routes, Route, Link } from 'react-router-dom'; // 라우터
 
 import First from './album/First.js';
+import Second from './album/Second.js';
 import { useState, useEffect } from 'react';
 // import { useDispatch, useSelector } from "react-redux"
 
@@ -28,9 +29,10 @@ function App() {
         <li><a href="32">3집 PART 2 [THIRSTY]</a></li>
         <li><a href="33">3집 PART 3 [TEEN TROUBLES]</a></li>
         <li><a href="4">Hidden Track</a></li>
+        <button className='button open-button'>open modal</button>
       </ul>
 
-      <Routes> 
+      <Routes>
         <Route path="/" element={
           <>
             <div className={"main "+ a}>
@@ -38,15 +40,26 @@ function App() {
                 setMenuOpen(!menuOpen);
               }}>{menuOpen ? 'open' : 'close'}</button>
               안녕하세요
+              <dialog class="modal" id="modal">
+                <h2>an interesting title</h2>
+                <p>aergadgajshlandv;oairnnkv</p>
+                <p>aorlnvoainvo;ainr;ovinadfv</p>
+                <button className='button close-button' >close modal</button>
+              </dialog>
             </div>
+            
           </>
         }/>
 
         <Route path="/1" element={
           <First menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         }/>
-      </Routes>
 
+        <Route path="/2" element={
+          <Second menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        }/>
+
+      </Routes>
     </div>
   );
 }
