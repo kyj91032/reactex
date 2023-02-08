@@ -1,12 +1,19 @@
 import { useState } from 'react';
 import data1 from './../data/data1.js'
 
+import { useDispatch, useSelector } from "react-redux"
+import { setMenuOpen } from '.././store.js';
+
+
 function Second(props){
+
+  let state = useSelector((state) => {return state})
+  let dispatch = useDispatch()
 
   let [songdata] = useState(data1)
   console.log(songdata)
 
-  let a = props.menuOpen ? 'active2' : ''
+  let a = state.menuOpen ? 'active2' : ''
 
   return (
     <>
@@ -22,8 +29,8 @@ function Second(props){
             <li>기획사 | 도기리치, 비스포크</li>
           </ul>
           <button className="oc" onClick={()=>{
-                props.setMenuOpen(!props.menuOpen);
-              }}>{props.menuOpen ? 'open' : 'close'}
+                dispatch(setMenuOpen());
+              }}>{state.menuOpen ? 'open' : 'close'}
           </button>
         </div>
         <div className="track">
